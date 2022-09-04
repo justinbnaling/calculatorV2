@@ -1,0 +1,58 @@
+/* reset button style */
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.calculator {
+  height: 300px;
+  width: 200px;
+  display: grid;
+  grid-template-rows: 50px auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
+  background-color: black;
+  gap: 1px;
+}
+
+.calcDisplay {
+  grid-column-start: span 4;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+
+button {
+  color: white;
+}
+
+.operators {
+  background-color: orange;
+}
+
+.numbers {
+  background-color: gray;
+}
+
+.AC,
+.posNeg,
+.percent {
+  background-color: darkgray;
+}
+
+.animate,
+button:active {
+  background-color: lightgray;
+  transition: .1s;
+}
+
+[data-keydigit="48"] {
+  grid-column-start: span 2;
+}
